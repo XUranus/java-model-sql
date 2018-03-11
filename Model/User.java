@@ -1,15 +1,11 @@
 package Model;
-
-import lib.Attribute;
 import lib.Model;
-
 import java.util.ArrayList;
 
 public class User extends Model {
+    private static ArrayList<String> Keys;
 
-    public User(ArrayList<Attribute> attributeList) {
-        super("User",attributeList);
+    public User(ArrayList<String> Keys) {
+        super("User",Keys);
     }
-
-
 }

@@ -1,6 +1,6 @@
 package lib;
 
-public class Attribute<T> {
+public class Attribute {
     /**
      For Example :
             ----------------------
@@ -12,18 +12,17 @@ public class Attribute<T> {
      A record is composed of several Attribute
      we mark it by key -- value
 
-
      T value: value only allow to be String or int or double
      **/
     private String key;
-    private T value;
+    private Object value;
 
-    public Attribute(String key,T value) {
+    public Attribute(String key,Object value) {
         this.key = key;
         this.value = value;
     }
 
-    public void setValue(T newValue) {
+    public void setValue(Object newValue) {
         this.value = newValue;
     }
 

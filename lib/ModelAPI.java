@@ -7,6 +7,6 @@ public interface ModelAPI {
     public void delete();
     public void update(Attribute attribute);
     public Model find(int index);
-    public Model find(Attribute attribute);
+    public ArrayList<Model> find(String key,Object value);
 
 }

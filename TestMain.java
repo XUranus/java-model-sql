@@ -1,21 +1,35 @@
 import Model.User;
 import lib.Attribute;
+import lib.Model;
 import lib.MysqlExcutor;
 
 import java.util.ArrayList;
 
 public class TestMain {
     public static void main(String [] args) {
-        ArrayList<Attribute> attrList = new ArrayList<>();
-        attrList.add(new Attribute("username","XUranus"));
-        //attrList.add(new Attribute("age",20));
+        ArrayList<String> keys = new ArrayList<>();
+        keys.add("username");
+        keys.add("id");
+        User user = new User(keys);
+        /*
+        ArrayList<Model> users = user.find("username","XUranus");
+        for(Model u: users) {
+            System.out.println(u);
+        }*/
 
-        User user = new User(attrList);
-        //user.create();
-        //user.delete();
-        user.find(1);
-        //user.find(new Attribute("username","XUranus"));
-        //user.update(new Attribute("username","GODV"));
+        //System.out.println(user.find(2));
+
+        /*ArrayList<Attribute> attrList = new ArrayList<>();
+        attrList.add(new Attribute("username","WXX"));
+        user.create(attrList);*/
+
+        //user.find(1).delete();
+
+
+        Model newUser = user.find(2);
+        newUser.setAttribute("username","XYX");
+        System.out.println(newUser);
+        newUser.update();
 
         /*MysqlExcutor excutor = new MysqlExcutor();
         String sql = "CREATE TABLE user( "+
